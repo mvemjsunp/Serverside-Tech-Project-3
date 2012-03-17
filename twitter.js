@@ -14,6 +14,7 @@ var t = new twitter({
 /*
 ISSUES:
 -what if tweet has multiple tracked words, or multiple instances of the same word?
+-what if tweet has multiple URLs?
 -incrementing count on a list of counts means getting a string value, 
 	parsing int, incrementing, then writing back as a string
 -can we store trackedWords in redis as well so that it can be modified by other client?
