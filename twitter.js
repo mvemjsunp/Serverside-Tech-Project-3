@@ -50,7 +50,7 @@ t.stream(
 			if (tweetURL != "") {  //undefined?? 
 				for (var i = 0 ; i < trackedWords.length ; i++) {
 					var word = trackedWords[i];
-					var wordRegExp = new RegExp(trackedWords[i]); //turn string in trackedwords in to regexp
+					var wordRegExp = new RegExp(word); //turn string in trackedwords in to regexp
 					if(tweet.text.match(wordRegExp)) {
 						var urlListName = word + "urls";
 						var countsListName = word + "counts";
@@ -64,7 +64,7 @@ t.stream(
 							if (error) {
 								console.log("error: " + error);
 							}
-							client.lrange(word, 0, listLength - 1, function (error, list) {// -1 might be wrong
+							client.lrange(urlListName, 0, listLength - 1, function (error, list) {// -1 might be wrong
 								if (error) {
 									console.log("error: " + error);
 								}
