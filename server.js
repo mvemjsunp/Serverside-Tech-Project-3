@@ -75,6 +75,3 @@ http.createServer(function (request, response) {
 }).listen(3000);
 
 console.log('Server running on port 3000');
-
-
-//client.zrevrangebyscore('awesome', '+inf', '-inf', 'withscores', function(error, results){
