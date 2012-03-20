@@ -49,7 +49,7 @@ http.createServer(function (request, response) {
 							(function(word, url, i, j) {
 								client.zscore(word, url, function(error, score) {
 									response += url +" :: "+ score;
-									confirmations2[i*j] = true;
+									confirmations2[i * trackedWords.length + j] = true;
 								});
 							})(word, url, i, j);
 						}
